@@ -1141,7 +1141,7 @@ class Gene_Braintree_Model_Wrapper_Braintree extends Mage_Core_Model_Abstract
      *
      * @param $token
      *
-     * @return bool|\Braintree\Result\Successful
+     * @return \Braintree\Result\Successful|false
      */
     public function deletePaymentMethod($token)
     {

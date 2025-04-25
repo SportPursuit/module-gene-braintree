@@ -76,7 +76,7 @@ class Gene_Braintree_SavedController extends Mage_Core_Controller_Front_Action
     /**
      * Allow a user to edit details of a payment method
      *
-     * @return $this|false
+     * @return $this|false|void
      */
     public function editAction()
     {

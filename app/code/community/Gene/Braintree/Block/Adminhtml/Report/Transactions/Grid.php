@@ -50,7 +50,7 @@ class Gene_Braintree_Block_Adminhtml_Report_Transactions_Grid extends Mage_Admin
         $searchArray = array();
 
         // Init some times
-        $to = new Datetime();
+        $to = new DateTime();
         $from = clone $to;
         $from = $from->modify("-24 hour");
 
