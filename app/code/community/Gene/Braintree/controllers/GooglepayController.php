@@ -308,7 +308,7 @@ class Gene_Braintree_GooglepayController extends Mage_Core_Controller_Front_Acti
     }
 
     /**
-     * @return mixed
+     * @return Mage_Sales_Model_Quote
      * @throws Mage_Core_Model_Store_Exception
      */
     protected function getQuote()

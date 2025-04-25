@@ -94,7 +94,7 @@ class Gene_Braintree_Model_Kount_Rest extends Mage_Core_Model_Abstract
      * @param $action
      * @param $payload
      *
-     * @return bool|\Zend_Http_Response
+     * @return mixed|false
      * @throws \Exception
      * @throws \Zend_Http_Client_Exception
      */

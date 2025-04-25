@@ -19,7 +19,7 @@ class Gene_Braintree_Block_Applepay extends Mage_Payment_Block_Form
     /**
      * Generate and return a token
      *
-     * @return mixed
+     * @return string
      */
     public function getClientToken()
     {

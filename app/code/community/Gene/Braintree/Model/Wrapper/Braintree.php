@@ -121,7 +121,7 @@ class Gene_Braintree_Model_Wrapper_Braintree extends Mage_Core_Model_Abstract
      *
      * @param $braintreeCustomerId
      *
-     * @return Braintree\Customer
+     * @return Braintree\Customer|false
      */
     public function getCustomer($braintreeCustomerId)
     {
@@ -158,7 +158,7 @@ class Gene_Braintree_Model_Wrapper_Braintree extends Mage_Core_Model_Abstract
     /**
      * Generate a server side token with the specified account ID
      *
-     * @return mixed
+     * @return string
      */
     public function generateToken()
     {
@@ -513,7 +513,7 @@ class Gene_Braintree_Model_Wrapper_Braintree extends Mage_Core_Model_Abstract
      * @param $nonce
      * @param $billingAddress
      *
-     * @return \Braintree\Customer
+     * @return \Braintree\Result\Error|\Braintree\Result\Successful
      */
     public function storeInGuestVault($nonce, $billingAddress = false)
     {
@@ -830,7 +830,7 @@ class Gene_Braintree_Model_Wrapper_Braintree extends Mage_Core_Model_Abstract
      *
      * @param $saleArray
      *
-     * @return stdClass
+     * @return \Braintree\Exception\NotFound|\Braintree\Result\Successful
      */
     public function makeSale($saleArray)
     {
@@ -1123,7 +1123,7 @@ class Gene_Braintree_Model_Wrapper_Braintree extends Mage_Core_Model_Abstract
      *
      * @param $customerId
      *
-     * @return \Braintree\Result\Successful
+     * @return \Braintree\Result\Successful|false
      */
     public function deleteCustomer($customerId)
     {
@@ -1206,7 +1206,7 @@ class Gene_Braintree_Model_Wrapper_Braintree extends Mage_Core_Model_Abstract
      *
      * @param $string
      *
-     * @return mixed
+     * @return array|string|string[]
      */
     public function parseMessage($string)
     {

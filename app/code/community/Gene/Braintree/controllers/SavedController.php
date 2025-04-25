@@ -50,7 +50,7 @@ class Gene_Braintree_SavedController extends Mage_Core_Controller_Front_Action
     /**
      * Action to allow users to delete payment methods
      *
-     * @return Mage_Core_Controller_Varien_Action
+     * @return $this|false
      *
      * @throws Exception
      */
@@ -76,7 +76,7 @@ class Gene_Braintree_SavedController extends Mage_Core_Controller_Front_Action
     /**
      * Allow a user to edit details of a payment method
      *
-     * @return bool|\Mage_Core_Controller_Varien_Action
+     * @return $this|false
      */
     public function editAction()
     {
@@ -109,7 +109,7 @@ class Gene_Braintree_SavedController extends Mage_Core_Controller_Front_Action
     /**
      * Saving the payment methods update
      *
-     * @return bool|\Mage_Core_Controller_Varien_Action
+     * @return $this|false
      */
     public function saveAction()
     {
@@ -161,7 +161,7 @@ class Gene_Braintree_SavedController extends Mage_Core_Controller_Front_Action
     /**
      * Init the payment method
      *
-     * @return \Mage_Core_Controller_Varien_Action|object
+     * @return \Braintree\CreditCard|\Braintree\PayPalAccount|false
      */
     protected function _initPaymentMethod()
     {
