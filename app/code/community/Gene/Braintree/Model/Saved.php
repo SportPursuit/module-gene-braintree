@@ -3,7 +3,7 @@
  * Class Gene_Braintree_Model_Saved
  *
  * @author Dave Macaulay <braintreesupport@gene.co.uk>
- */ 
+ */
 class Gene_Braintree_Model_Saved extends Mage_Core_Model_Abstract
 {
 

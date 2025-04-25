@@ -9,7 +9,7 @@
                 <th style="text-align: left;font-weight:bold;padding: 3px 0;"><?php echo $this->escapeHtml($_label)?>:</th>
             </tr>
             <tr>
-                <td style="padding: 3px 0;"><?php echo nl2br(implode($this->getValueAsArray($_value, true), "\n"))?></td>
+                <td style="padding: 3px 0;"><?php echo nl2br(implode("\n", $this->getValueAsArray($_value, true)))?></td>
             </tr>
         <?php endif;
         endforeach; ?>
