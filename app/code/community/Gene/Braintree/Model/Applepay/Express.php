@@ -236,7 +236,7 @@ class Gene_Braintree_Model_Applepay_Express extends Mage_Core_Model_Abstract
      * Add any additional response parameters
      *
      * @param $response
-     * @return mixed
+     * @return array
      */
     public function getAdditionalResponse($response)
     {
@@ -273,7 +273,6 @@ class Gene_Braintree_Model_Applepay_Express extends Mage_Core_Model_Abstract
         foreach ($countryCollection as $country) {
             if ($countryName == $country->getName()) {
                 return $country->getCountryId();
-                break;
             }
         }
 

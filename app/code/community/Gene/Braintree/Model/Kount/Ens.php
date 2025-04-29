@@ -24,7 +24,6 @@ class Gene_Braintree_Model_Kount_Ens extends Mage_Core_Model_Abstract
         switch ($event['name']) {
             case 'WORKFLOW_STATUS_EDIT':
                 return $this->_workflowStatusEdit($event);
-                break;
         }
 
         // If we don't support the event, assume it was a success
@@ -291,7 +290,7 @@ class Gene_Braintree_Model_Kount_Ens extends Mage_Core_Model_Abstract
      *
      * @param $event
      *
-     * @return mixed
+     * @return mixed|null
      */
     protected function _getOrderIncrementId($event)
     {

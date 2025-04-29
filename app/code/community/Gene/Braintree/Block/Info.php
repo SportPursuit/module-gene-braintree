@@ -15,7 +15,7 @@ class Gene_Braintree_Block_Info extends Mage_Payment_Block_Info
     /**
      * Return the currently viewed order
      *
-     * @return \Mage_Sales_Model_Order|\Mage_Sales_Model_Order_Invoice|\Mage_Sales_Model_Order_Creditmemo
+     * @return \Mage_Sales_Model_Order|\Mage_Sales_Model_Order_Invoice|\Mage_Sales_Model_Order_Creditmemo|false
      */
     protected function getViewedObject()
     {
@@ -182,19 +182,14 @@ class Gene_Braintree_Block_Info extends Mage_Payment_Block_Info
         switch($status){
             case 'authorized':
                 return '<span style="color: #40A500;"> ' . Mage::helper('gene_braintree')->__('Authorized') . '</span>';
-                break;
             case 'submitted_for_settlement':
                 return '<span style="color: #40A500;">' . Mage::helper('gene_braintree')->__('Submitted For Settlement') . '</span>';
-                break;
             case 'settling':
                 return '<span style="color: #40A500;">' . Mage::helper('gene_braintree')->__('Settling') . '</span>';
-                break;
             case 'settled':
                 return '<span style="color: #40A500;">' . Mage::helper('gene_braintree')->__('Settled') . '</span>';
-                break;
             case 'voided':
                 return '<span style="color: #ed4737;">' . Mage::helper('gene_braintree')->__('Voided') . '</span>';
-                break;
         }
 
         return ucwords($status);

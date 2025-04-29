@@ -212,7 +212,7 @@ abstract class Gene_Braintree_Model_Paymentmethod_Abstract extends Mage_Payment_
      *
      * @param Varien_Object $payment
      *
-     * @return Mage_Payment_Model_Abstract
+     * @return $this
      */
     public function void(Varien_Object $payment)
     {
@@ -261,7 +261,7 @@ abstract class Gene_Braintree_Model_Paymentmethod_Abstract extends Mage_Payment_
      *
      * @param Mage_Sales_Model_Order_Creditmemo $creditmemo
      * @param Mage_Sales_Model_Order_Payment $payment
-     * @return Mage_Payment_Model_Method_Abstract
+     * @return $this
      */
     public function processCreditmemo($creditmemo, $payment)
     {
@@ -292,7 +292,7 @@ abstract class Gene_Braintree_Model_Paymentmethod_Abstract extends Mage_Payment_
      *
      * @param \Mage_Payment_Model_Info $payment
      *
-     * @return mixed
+     * @return Mage_Sales_Model_Order_Invoice|bool
      */
     public function acceptPayment(Mage_Payment_Model_Info $payment)
     {
@@ -330,7 +330,7 @@ abstract class Gene_Braintree_Model_Paymentmethod_Abstract extends Mage_Payment_
      *
      * @param \Mage_Payment_Model_Info $payment
      *
-     * @return mixed
+     * @return Mage_Sales_Model_Order_Invoice|bool
      */
     public function denyPayment(Mage_Payment_Model_Info $payment)
     {

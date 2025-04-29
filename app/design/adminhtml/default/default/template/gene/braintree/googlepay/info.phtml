@@ -8,7 +8,7 @@
         <table>
             <?php foreach ($_specificInfo as $_label => $_value): ?>
                 <tr>
-                    <th width="220"><?php echo $this->escapeHtml($_label); ?>:</td>
+                    <th style="width: 220px"><?php echo $this->escapeHtml($_label); ?>:</th>
                     <td><?php echo nl2br(implode("\n", $this->getValueAsArray($_value, false))); ?></td>
                 </tr>
             <?php endforeach; ?>

@@ -56,7 +56,7 @@ class Gene_Braintree_Model_Paymentmethod_Creditcard extends Gene_Braintree_Model
      *
      * @param   mixed $data
      *
-     * @return  Mage_Payment_Model_Info
+     * @return  $this
      */
     public function assignData($data)
     {
@@ -80,7 +80,7 @@ class Gene_Braintree_Model_Paymentmethod_Creditcard extends Gene_Braintree_Model
     /**
      * Determine whether or not the vault is enabled, can be modified by numerous events
      *
-     * @return bool
+     * @return mixed
      */
     public function isVaultEnabled()
     {
@@ -346,7 +346,7 @@ class Gene_Braintree_Model_Paymentmethod_Creditcard extends Gene_Braintree_Model
      * @param Varien_Object $payment
      * @param float         $amount
      *
-     * @return Mage_Payment_Model_Abstract
+     * @return $this
      */
     protected function _captureAuthorized(Varien_Object $payment, $amount)
     {
@@ -660,7 +660,7 @@ class Gene_Braintree_Model_Paymentmethod_Creditcard extends Gene_Braintree_Model
      * @param \Varien_Object $payment
      * @param float          $amount
      *
-     * @return \Mage_Payment_Model_Abstract
+     * @return $this
      */
     public function capture(Varien_Object $payment, $amount)
     {

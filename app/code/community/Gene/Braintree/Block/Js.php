@@ -53,7 +53,7 @@ class Gene_Braintree_Block_Js extends Gene_Braintree_Block_Assets
     }
 
     /**
-     * @return mixed
+     * @return bool
      */
     protected function isApplepayActive()
     {
@@ -65,7 +65,7 @@ class Gene_Braintree_Block_Js extends Gene_Braintree_Block_Assets
     }
 
     /**
-     * @return mixed
+     * @return bool
      */
     protected function isGooglepayActive()
     {
@@ -113,7 +113,7 @@ class Gene_Braintree_Block_Js extends Gene_Braintree_Block_Assets
     /**
      * Return supported credit cards
      *
-     * @return array
+     * @return string
      */
     protected function getSupportedCardTypes()
     {
@@ -171,7 +171,7 @@ class Gene_Braintree_Block_Js extends Gene_Braintree_Block_Assets
     /**
      * Generate and return a token
      *
-     * @return mixed
+     * @return string
      */
     protected function getClientToken()
     {

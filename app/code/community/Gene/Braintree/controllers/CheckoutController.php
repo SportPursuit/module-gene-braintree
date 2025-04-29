@@ -10,7 +10,7 @@ class Gene_Braintree_CheckoutController extends Mage_Core_Controller_Front_Actio
     /**
      * Return a client token to the browser
      *
-     * @return \Gene_Braintree_CheckoutController
+     * @return $this
      */
     public function clientTokenAction()
     {
@@ -36,7 +36,7 @@ class Gene_Braintree_CheckoutController extends Mage_Core_Controller_Front_Actio
     /**
      * The front-end is requesting the grand total of the quote
      *
-     * @return bool
+     * @return $this
      */
     public function quoteTotalAction()
     {
@@ -90,7 +90,7 @@ class Gene_Braintree_CheckoutController extends Mage_Core_Controller_Front_Actio
     /**
      * Tokenize the card tokens via Ajax
      *
-     * @return bool
+     * @return $this
      */
     public function tokenizeCardAction()
     {
@@ -120,7 +120,7 @@ class Gene_Braintree_CheckoutController extends Mage_Core_Controller_Front_Actio
     /**
      * Vault the nonce with it's billing details, then convert it back into a nonce
      *
-     * @return bool
+     * @return $this
      */
     public function vaultToNonceAction()
     {
