@@ -91,7 +91,7 @@ class Gene_Braintree_Block_Assets extends Mage_Core_Block_Template
     /**
      * Return the Braintree module version
      *
-     * @return mixed
+     * @return string|false
      */
     public function getModuleVersion()
     {
@@ -200,7 +200,7 @@ class Gene_Braintree_Block_Assets extends Mage_Core_Block_Template
     {
         // First check if the method is enabled in the admin directly?
         if (Mage::helper('gene_braintree')->isSetupRequired()) {
-            true;
+            return true;
         }
 
         // If it's not it might be enabled on a website level, payment methods cannot be disabled / enabled on store

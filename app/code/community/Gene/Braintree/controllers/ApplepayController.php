@@ -9,7 +9,7 @@ class Gene_Braintree_ApplepayController extends Mage_Core_Controller_Front_Actio
     /**
      * Setup our Express model with required data
      *
-     * @return Gene_Braintree_Model_Applepay_Express
+     * @return Gene_Braintree_Model_Applepay_Express|$this
      */
     protected function _setupExpress()
     {
@@ -84,7 +84,7 @@ class Gene_Braintree_ApplepayController extends Mage_Core_Controller_Front_Actio
     /**
      * Submit an Apple Pay transaction
      *
-     * @return bool
+     * @return $this
      */
     public function submitAction()
     {
@@ -138,7 +138,7 @@ class Gene_Braintree_ApplepayController extends Mage_Core_Controller_Front_Actio
      *
      * @param $message
      *
-     * @return Gene_Braintree_ApplepayController
+     * @return $this
      */
     public function errorAction($message)
     {

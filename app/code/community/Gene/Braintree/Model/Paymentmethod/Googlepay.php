@@ -159,7 +159,7 @@ class Gene_Braintree_Model_Paymentmethod_Googlepay extends Gene_Braintree_Model_
      *
      * @param Varien_Object $payment
      * @param float $amount
-     * @return Mage_Payment_Model_Abstract
+     * @return $this
      */
     public function capture(Varien_Object $payment, $amount)
     {

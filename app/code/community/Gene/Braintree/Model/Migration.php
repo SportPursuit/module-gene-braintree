@@ -112,7 +112,7 @@ class Gene_Braintree_Model_Migration extends Mage_Core_Model_Abstract
         );
 
         // Sandbox details go into their own fields
-        if (Mage::getStoreConfig('payment/braintree/environment') == Braintree_Payments_Model_Source_Environment::ENVIRONMENT_SANDBOX) {
+        if (Mage::getStoreConfig('payment/braintree/environment') == Gene_Braintree_Model_Source_Environment::SANDBOX) {
             $configurationMapping = array_merge($configurationMapping, array(
                 'merchant_id' => 'gene_braintree/sandbox_merchant_id',
                 'merchant_account_id' => 'gene_braintree/sandbox_merchant_account_id',

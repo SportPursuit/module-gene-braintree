@@ -32,7 +32,7 @@ class Gene_Braintree_Block_Applepay_Setup extends Mage_Core_Block_Template
     /**
      * Generate and return a token
      *
-     * @return mixed
+     * @return string
      */
     protected function getClientToken()
     {

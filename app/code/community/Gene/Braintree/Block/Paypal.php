@@ -25,7 +25,7 @@ class Gene_Braintree_Block_Paypal extends Mage_Payment_Block_Form
     /**
      * Generate and return a token
      *
-     * @return mixed
+     * @return string
      */
     public function getClientToken()
     {
@@ -50,7 +50,7 @@ class Gene_Braintree_Block_Paypal extends Mage_Payment_Block_Form
     /**
      * Does this customer have saved accounts?
      *
-     * @return mixed
+     * @return int|false
      */
     public function hasSavedDetails()
     {
@@ -93,7 +93,7 @@ class Gene_Braintree_Block_Paypal extends Mage_Payment_Block_Form
     /**
      * Is the vault enabled? Meaning we can save PayPal
      *
-     * @return mixed
+     * @return bool
      */
     public function canSavePayPal()
     {

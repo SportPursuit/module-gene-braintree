@@ -3,7 +3,7 @@
  * Class Gene_Braintree_Model_Saved
  *
  * @author Dave Macaulay <braintreesupport@gene.co.uk>
- */ 
+ */
 class Gene_Braintree_Model_Saved extends Mage_Core_Model_Abstract
 {
 
@@ -21,7 +21,7 @@ class Gene_Braintree_Model_Saved extends Mage_Core_Model_Abstract
     /**
      * Get the current customers saved cards
      *
-     * @return array
+     * @return array|false
      */
     public function getCustomerSavedPaymentMethods()
     {

@@ -227,7 +227,7 @@ class Gene_Braintree_ExpressController extends Mage_Core_Controller_Front_Action
     /**
      * Display shipping methods for the user to select.
      *
-     * @return Mage_Core_Controller_Varien_Action
+     * @return $this
      * @throws Exception
      */
     public function shippingAction()
@@ -283,12 +283,13 @@ class Gene_Braintree_ExpressController extends Mage_Core_Controller_Front_Action
             ->setQuote($quote);
 
         $this->getResponse()->setBody($block->toHtml());
+        return $this;
     }
 
     /**
      * Saving a shipping action will update the quote and then provide new totals
      *
-     * @return \Mage_Core_Controller_Varien_Action|string
+     * @return $this
      */
     public function saveShippingAction()
     {
@@ -319,7 +320,7 @@ class Gene_Braintree_ExpressController extends Mage_Core_Controller_Front_Action
     /**
      * Allow customers to add coupon codes into their orders
      *
-     * @return \Gene_Braintree_ExpressController|\Zend_Controller_Response_Abstract
+     * @return $this
      */
     public function saveCouponAction()
     {

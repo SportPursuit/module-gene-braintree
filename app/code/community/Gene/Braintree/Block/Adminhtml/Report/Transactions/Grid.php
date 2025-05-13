@@ -9,6 +9,7 @@ class Gene_Braintree_Block_Adminhtml_Report_Transactions_Grid extends Mage_Admin
 {
     /**
      * We allow overriding of the search query
+     * @var array|false
      */
     private $searchQuery = false;
 
@@ -37,7 +38,7 @@ class Gene_Braintree_Block_Adminhtml_Report_Transactions_Grid extends Mage_Admin
     /**
      * Build up a search query based on the users entries
      *
-     * @return $this
+     * @return array
      */
     protected function _prepareBraintreeSearchQuery()
     {
@@ -49,7 +50,7 @@ class Gene_Braintree_Block_Adminhtml_Report_Transactions_Grid extends Mage_Admin
         $searchArray = array();
 
         // Init some times
-        $to = new Datetime();
+        $to = new DateTime();
         $from = clone $to;
         $from = $from->modify("-24 hour");
 
@@ -86,7 +87,7 @@ class Gene_Braintree_Block_Adminhtml_Report_Transactions_Grid extends Mage_Admin
     /**
      * Prepare the collection for the report
      *
-     * @return $this|Mage_Adminhtml_Block_Widget_Grid
+     * @return $this|false
      */
     protected function _prepareCollection()
     {

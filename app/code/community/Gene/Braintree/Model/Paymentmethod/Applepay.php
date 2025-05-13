@@ -74,7 +74,7 @@ class Gene_Braintree_Model_Paymentmethod_Applepay extends Gene_Braintree_Model_P
      * Place Braintree specific data into the additional information of the payment instance object
      *
      * @param mixed $data
-     * @return Mage_Payment_Model_Info
+     * @return $this
      * @throws Mage_Core_Exception
      */
     public function assignData($data)
@@ -219,7 +219,7 @@ class Gene_Braintree_Model_Paymentmethod_Applepay extends Gene_Braintree_Model_P
      *
      * @param Varien_Object $payment
      * @param float $amount
-     * @return Mage_Payment_Model_Abstract
+     * @return $this
      */
     public function capture(Varien_Object $payment, $amount)
     {
@@ -270,7 +270,7 @@ class Gene_Braintree_Model_Paymentmethod_Applepay extends Gene_Braintree_Model_P
      *
      * @param Varien_Object $payment
      * @param float         $amount
-     * @return Mage_Payment_Model_Abstract
+     * @return $this
      */
     protected function _captureAuthorized(Varien_Object $payment, $amount)
     {

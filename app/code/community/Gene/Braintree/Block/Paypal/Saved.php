@@ -25,7 +25,7 @@ class Gene_Braintree_Block_Paypal_Saved extends Mage_Core_Block_Template
     /**
      * Does this customer have saved accounts?
      *
-     * @return mixed
+     * @return int|false
      */
     public function hasSavedDetails()
     {

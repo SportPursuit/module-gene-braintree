@@ -51,7 +51,7 @@ class Gene_Braintree_Block_Creditcard extends Mage_Payment_Block_Form_Cc
     /**
      * Does this customer have saved accounts?
      *
-     * @return mixed
+     * @return int|false
      */
     public function hasSavedDetails()
     {
@@ -94,7 +94,7 @@ class Gene_Braintree_Block_Creditcard extends Mage_Payment_Block_Form_Cc
     /**
      * is 3D secure enabled?
      *
-     * @return mixed
+     * @return bool
      */
     protected function is3DEnabled()
     {
@@ -138,26 +138,19 @@ class Gene_Braintree_Block_Creditcard extends Mage_Payment_Block_Form_Cc
         switch (str_replace(' ', '', strtolower($cardType))) {
             case 'mastercard':
                 return 'MC.png';
-                break;
             case 'visa':
                 return 'VI.png';
-                break;
             case 'americanexpress':
             case 'amex':
                 return 'AE.png';
-                break;
             case 'discover':
                 return 'DI.png';
-                break;
             case 'jcb':
                 return 'JCB.png';
-                break;
             case 'maestro':
                 return 'ME.png';
-                break;
             case 'paypal':
                 return 'PP.png';
-                break;
         }
 
         // Otherwise return the standard card image
@@ -167,7 +160,7 @@ class Gene_Braintree_Block_Creditcard extends Mage_Payment_Block_Form_Cc
     /**
      * Generate and return a token
      *
-     * @return mixed
+     * @return string
      */
     protected function getClientToken()
     {
